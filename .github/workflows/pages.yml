@@ -21,7 +21,7 @@ jobs:
         run: npm install
 
       - name: Build
-        run: cp tiddlyweb.info tiddlywiki.info && npx tiddlywiki --build
+        run: cp tiddlyweb.info tiddlywiki.info && npx tiddlywiki --build static && mv output/static.html output/index.html
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
